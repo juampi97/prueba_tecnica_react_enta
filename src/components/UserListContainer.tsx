@@ -21,7 +21,7 @@ const UserListContainer = ({data}) => {
       }
 
       if(order == 'desc'){
-        for(let j = data.length - 1; j > 0; j--) {
+        for(let j = data.length - 1; j >= 0; j--) {
             usuarios.push(data[j])
         }
         setUsers(usuarios)
