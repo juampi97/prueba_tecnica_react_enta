@@ -11,7 +11,7 @@ const UserListContainer = ({data}) => {
     useEffect(()=>{
       if(!data) return
        
-      setUsers(orderData(data,order))
+      setUsers(orderData(data))
        
     },[data, order])  
 

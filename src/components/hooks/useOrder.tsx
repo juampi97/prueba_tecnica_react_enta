@@ -4,7 +4,7 @@ import { OrderContext } from "../constext/order";
 export function useOrder() {
     const {order, setOrder} = useContext(OrderContext)
 
-    const orderData = (data,order) => {
+    const orderData = (data) => {
         
         let usuarios = []
         
@@ -19,7 +19,7 @@ export function useOrder() {
                 usuarios.push(data[j])
             }
           }
-        
+          
           return usuarios
     }
 
