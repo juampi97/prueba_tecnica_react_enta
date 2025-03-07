@@ -5,27 +5,14 @@ import { useOrder } from "./hooks/useOrder";
 
 const UserListContainer = ({data}) => {  
     
-    const {order} = useOrder()
+    const {order, orderData} = useOrder()
     const [users,setUsers] = useState(null)
 
     useEffect(()=>{
       if(!data) return
-     
-      let usuarios = []
-      
-      if(order == 'asc'){
-        for(let i = 0; i < data.length; i++) {
-            usuarios.push(data[i])
-        }
-        setUsers(usuarios)
-      }
-
-      if(order == 'desc'){
-        for(let j = data.length - 1; j >= 0; j--) {
-            usuarios.push(data[j])
-        }
-        setUsers(usuarios)
-      }     
+       
+      setUsers(orderData(data,order))
+       
     },[data, order])  
 
   return (
