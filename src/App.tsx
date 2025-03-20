@@ -1,6 +1,6 @@
 import Error from "./components/Error";
 import Header from "./components/Header";
-import { useFetch } from "./components/hooks/useFetch";
+import { useFetch } from "./hooks/useFetch";
 import Loading from "./components/Loading";
 import UserListContainer from "./components/UserListContainer";
 

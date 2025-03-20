@@ -1,7 +1,7 @@
 import React from "react";
 import { useState,useEffect } from "react";
-import UserListItem from "./userListItem";
-import { useOrder } from "./hooks/useOrder";
+import UserListItem from "./UserListItem";
+import { useOrder } from "../hooks/useOrder";
 
 const UserListContainer = ({data}) => {  
     
@@ -11,7 +11,7 @@ const UserListContainer = ({data}) => {
     useEffect(()=>{
       if(!data) return
        
-      setUsers(orderData(data))
+      setUsers(orderData(data))  
        
     },[data, order])  
 
